@@ -57,7 +57,7 @@
     border-radius: 4px;
     margin-top: 4px;
     cursor: pointer;
-    /* background-color: rgb(212, 233, 241); */
+    /* background-color: rgba(209, 196, 229, 0.769); */
 }
 
 .col1 > div li a{
@@ -93,4 +93,77 @@ table tr td{
 
 .table-search{
     background-color: whitesmoke !important;
+}
+
+.progres{
+    position: relative;
+    width: 70%;
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+    color: white; 
+    margin: 20% auto;
+}
+
+.progres::after{
+    content: "";
+    position: absolute;
+    inset: 12px;
+    background: white ;
+    border-radius: 50%;
+}
+
+.second-progres{
+    position: absolute;
+    height: 108%;
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+    z-index: 2;
+    top: -4%;
+    left: -4%;
+}
+.second-progres::after{
+    content:  "";
+    position: absolute;
+    background: white;
+    z-index: 3;
+    height: 76%;
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+    top: 12%;
+    left: 12%;
+}
+.third-progres{
+    height: 110%;
+    position: absolute;
+    border-radius: 50%;
+    aspect-ratio: 1/1;
+    background: orange;
+    z-index: 4;
+    top: -5%;
+    left: -5%;
+}
+.third-progres::after{
+    content: "";
+    height: 60%;
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+    background: white;
+    position: absolute;
+    left: 20%;
+    top: 20%;
+}
+.progres-content{
+    height: 50%;
+    aspect-ratio: 1/1;
+    position: relative;
+    top: 25%;
+    left: 25%;
+    z-index: 5;
+    background-color: white;
+    border-radius: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: black;
 }

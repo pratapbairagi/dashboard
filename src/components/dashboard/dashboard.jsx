@@ -37,10 +37,10 @@ const Dashboard = () => {
     ];
 
     const cardRecords = [
-        {amount: 198, title :"Earning", result : 17.8, inon : PiggyBank, arrows : ArrowUp, colorArrow : "green", iconBg:"rgb(225, 255, 239)", iconColor:"rgb(7, 116, 63)"},
-        {amount: 2.4, title :"Orders", result : 31.8, inon : FileText, arrows : ArrowDown, colorArrow : "red", iconBg:"linear-gradient(rgb(216, 171, 216), rgb(224, 215, 224))", iconColor:"purple"},
-        {amount: 2.6, title :"Balance", result : 3, inon : Wallet2, arrows : ArrowDown, colorArrow : "red", iconBg:"linear-gradient(skyblue, rgb(212, 233, 241))", iconColor:"teal"},
-        {amount: 89, title :"Total Sales", result : 37.9, inon : Handbag, arrows : ArrowUp, colorArrow : "green", iconBg:"linear-gradient(rgb(246, 183, 193), rgb(247, 230, 232))", iconColor:"rgb(214, 88, 103)"}
+        { amount: 198, title: "Earning", result: 17.8, inon: PiggyBank, arrows: ArrowUp, colorArrow: "green", iconBg: "rgb(225, 255, 239)", iconColor: "rgb(7, 116, 63)" },
+        { amount: 2.4, title: "Orders", result: 31.8, inon: FileText, arrows: ArrowDown, colorArrow: "red", iconBg: "linear-gradient(rgb(216, 171, 216), rgb(224, 215, 224))", iconColor: "purple" },
+        { amount: 2.6, title: "Balance", result: 3, inon: Wallet2, arrows: ArrowDown, colorArrow: "red", iconBg: "linear-gradient(skyblue, rgb(212, 233, 241))", iconColor: "teal" },
+        { amount: 89, title: "Total Sales", result: 37.9, inon: Handbag, arrows: ArrowUp, colorArrow: "green", iconBg: "linear-gradient(rgb(246, 183, 193), rgb(247, 230, 232))", iconColor: "rgb(214, 88, 103)" }
     ]
     return (
         <div className="container-fluid dasboard-container p-0" style={{ height: "100%", minHeight: "100vh", width: "100%", background: "rgb(4, 4, 64)" }}>
@@ -124,10 +124,10 @@ const Dashboard = () => {
                             </fieldset>
                         </div>
 
-                        <div className="col px-3 py-3" style={{ display: "flex", gap: "20px", maxWidth: "100%", minWidth: "100%", width: "100%", overflowX: "auto" }}>
+                        <div className="col px-3 py-2" style={{ display: "flex", gap: "20px", maxWidth: "100%", minWidth: "100%", width: "100%", overflowX: "auto" }}>
 
-                            {cardRecords.map((v,i)=>{
-                               return <Cards key={i} Icon={v.inon} iconBg={v.iconBg} iconColor={v.iconColor} Arrow={v.arrows} colorArrow={v.colorArrow} amount={v.amount} result={v.result} title={v.title} />
+                            {cardRecords.map((v, i) => {
+                                return <Cards key={i} Icon={v.inon} iconBg={v.iconBg} iconColor={v.iconColor} Arrow={v.arrows} colorArrow={v.colorArrow} amount={v.amount} result={v.result} title={v.title} />
 
                             })}
 
@@ -159,7 +159,7 @@ const Dashboard = () => {
 
                                 <VictoryChart
                                     theme={VictoryTheme.material}
-                                    domainPadding={5}
+                                    domainPadding={2}
                                     width={600}
                                 >
                                     <VictoryAxis
@@ -172,11 +172,13 @@ const Dashboard = () => {
                                         data={data}
                                         x="month"
                                         y="earning"
-                                        cornerRadius={4}
+                                        cornerRadius={10}
+                                        barWidth="38"
                                         style={{
                                             data: {
-                                                fill: "orange",
+                                                fill: ({ datum }) => datum._x === 10 ? "rgb(107, 53, 193)" : "rgba(209, 196, 229, 0.769)",
                                                 width: "30"
+
                                             }
                                         }}
                                     />
@@ -189,12 +191,25 @@ const Dashboard = () => {
                                     <span style={{ fontSize: "14px", fontWeight: "700", color: "black" }}>Customers</span>
                                     <span className="p-0" style={{ fontSize: "8px", fontWeight: "700", color: "grey" }}>Customers that buy products</span>
                                 </div>
-                                <VictoryPie
+
+                                    <div className="progres" style={{background:`conic-gradient(rgba(209, 196, 229, 0.769) 365deg, white 0)`}} >
+                                       <div className="second-progres" style={{background:`conic-gradient(rgb(107, 53, 193) 210deg, transparent 0)`}}>
+                                           <div className="third-progres" style={{background:`conic-gradient(rgb(246, 183, 193) 65deg, transparent 0)`}}>
+                                                <div className="progres-content">
+                                                    <span className="p-0 m-0" style={{fontSize:"32px", fontWeight:"800"}}>65%</span>
+                                                    
+                                                    <span className="p-0 m-0" style={{fontSize:"14px", fontWeight:"600", maxWidth:"80%", color:"grey", lineHeight:"115%"}}>Total New Customers</span>
+                                                </div>
+                                           </div>
+                                       </div>
+                                    </div>
+
+                                {/* <VictoryPie
                                     padAngle={({ datum }) => datum.y}
                                     innerRadius={100}
                                     colorScale={["red", "green", "yellow", "blue", "grey"]}
 
-                                />
+                                /> */}
                             </div>
 
                         </div>
