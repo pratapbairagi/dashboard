@@ -57,7 +57,7 @@
     border-radius: 4px;
     margin-top: 4px;
     cursor: pointer;
-    /* background-color: rgba(209, 196, 229, 0.769); */
+    /* background-color: rgb(209, 199, 199); */
 }
 
 .col1 > div li a{
@@ -101,7 +101,7 @@ table tr td{
     aspect-ratio: 1/1;
     border-radius: 50%;
     color: white; 
-    margin: 20% auto;
+    margin: 22% auto;
 }
 
 .progres::after{

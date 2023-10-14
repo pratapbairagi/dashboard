@@ -44,23 +44,30 @@ const Dashboard = () => {
     ]
     return (
         <div className="container-fluid dasboard-container p-0" style={{ height: "100%", minHeight: "100vh", width: "100%", background: "rgb(4, 4, 64)" }}>
+            
+            {/* toggle dashboard button : start */}
             <button onClick={(e) => {
                 document.querySelector(".col1").classList.add("activeDash");
 
             }} className="dasboard-toggle-btn p-0" style={{ width: "46px", backgroundColor: "white", aspectRatio: "1/1", borderRadius: "50%", position: "fixed", zIndex: "1", top: "6.3vh", left: "12px", boxShadow: "0 0 1.5px grey" }}>
                 <ColumnsGap color="grey" size="50%" />
             </button>
+            {/* toggle dashboard button : end */}
 
             <div className="row m-0" style={{ minHeight: "100vh", height: "100%", width: "100%" }}>
 
                 <div className="col col-12 col-md-3 col-lg-2 col1 py-4 px-3 m-0" style={{ background: "rgb(4 4 64)", display: "flex", flexDirection: "column", position: "relative" }}>
+                    
+                    {/* toggle dashboard button : start */}
                     <button
-                        onClick={(e) => {
+                        onClick={() => {
                             document.querySelector(".col1").classList.remove("activeDash");
 
                         }} className="d-flex d-md-none" style={{ width: "max-content", aspectRatio: "1/1", justifyContent: "center", alignItems: "center", background: "transparent", marginLeft: "auto", position: "absolute", top: "8px", right: "6px" }} >
                         <XCircle color="white" size="24px" />
                     </button>
+                        {/* toggle dashboard button : end */}
+                    
                     <div style={{ display: "flex", justifyContent: "flex-start", gap: "10px", alignItems: "center", padding: "6px 0 6px 12px" }}>
                         <Nut color="whitesmoke" size="24px" />
                         <h6 className="p-0 m-0" style={{ height: "100%", fontWeight: "600", color: "whitesmoke", lineHeight: "130%" }}>DASHBOARD</h6>
@@ -165,6 +172,7 @@ const Dashboard = () => {
                                     <VictoryAxis
                                         tickValues={[1, 2, 3, 4]}
                                         tickFormat={["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"]}
+                                        
 
                                     />
 
@@ -173,12 +181,11 @@ const Dashboard = () => {
                                         x="month"
                                         y="earning"
                                         cornerRadius={10}
-                                        barWidth="38"
+                                        barWidth="36"
                                         style={{
                                             data: {
                                                 fill: ({ datum }) => datum._x === 10 ? "rgb(107, 53, 193)" : "rgba(209, 196, 229, 0.769)",
                                                 width: "30"
-
                                             }
                                         }}
                                     />
@@ -262,12 +269,12 @@ const Dashboard = () => {
                                                 </td>
                                                 <td style={{ width: "100%", display: "flex", flexDirection: "column" }}>
                                                     <span style={{ fontWeight: "700", fontSize: "12px" }}>{v.title}</span>
-                                                    <span className="p-0" style={{ fontWeight: "500" }}>{v.description}</span>
+                                                    <span className="p-0" style={{ fontWeight: "500", maxWidth:"100%", display:"-webkit-box", overflow:"hidden", WebkitLineClamp:"1", WebkitBoxOrient:"vertical", color:"rgb(209, 199, 199)" }}>{v.description}</span>
                                                 </td>
 
-                                                <td style={{ width: "15%" }}>{v.stock}</td>
-                                                <td style={{ width: "15%" }}>$ {v.price}</td>
-                                                <td style={{ width: "15%" }}>$ {v.total_sales}</td>
+                                                <td style={{ width: "15%", color:"grey" }}>{v.stock}</td>
+                                                <td style={{ width: "15%", fontSize:"11px" }}>$ {v.price}</td>
+                                                <td style={{ width: "15%", color:"grey" }}>$ {v.total_sales}</td>
                                             </tr>
                                         })}
                                     </tbody>
