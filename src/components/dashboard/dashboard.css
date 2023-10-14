@@ -1,0 +1,92 @@
+@media only screen and (min-width: 0px) and (max-width: 768px){
+    .col1{
+        /* height: 64px !important; */
+        height: 94%;
+        min-height: 90vh;
+        max-width: 240px !important;
+        left: 0;
+        bottom: 0;
+        border-radius: 20px;
+        border-bottom-left-radius: 0;
+        border-top-left-radius: 0;
+        position: fixed !important;
+        z-index: 1;
+        display: none !important;
+
+    }
+
+    .activeDash{
+        display: flex !important;
+    }
+    .deactiveDash{
+        display: none !important;
+    }
+    .dasboard-toggle-btn{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: white !important;
+
+    }
+}
+
+@media only screen and (min-width: 769px){
+    .col1{
+        height: 100%;
+        min-height: 100vh;
+        position: sticky !important;
+        top: 0;
+        /* width: 60px !important; */
+    }
+    .dasboard-toggle-btn{
+        display: none;
+    }
+}
+
+.col1 > div li{
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    padding: 8px 12px 6px 12px;
+    gap: 8px !important;
+    text-align: left !important;
+    border-radius: 4px;
+    margin-top: 4px;
+    cursor: pointer;
+    /* background-color: rgb(212, 233, 241); */
+}
+
+.col1 > div li a{
+    font-size: 12px;
+    color: rgb(159, 151, 151);
+}
+
+.col1 > div li:nth-child(1){
+    font-weight: 500;
+    color: rgb(224, 213, 213);
+    background-color: rgb(53, 53, 120);
+}
+
+.col1 > div li:hover{
+    background-color: rgb(53, 53, 120);
+}
+
+table tr th{
+    font-size:10px;
+    font-weight:600;
+    color:grey; 
+    text-align:left; 
+    padding:6px 6px;
+}
+
+table tr td{
+    font-size:10px;
+    font-weight:700;
+    color:rgb(88, 85, 85); 
+    text-align:left; 
+    padding:4px 6px;
+}
+
+.table-search{
+    background-color: whitesmoke !important;
+}

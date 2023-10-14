@@ -1,0 +1,16 @@
+*{
+  border: none;
+  text-decoration: none !important;
+  list-style: none !important;
+  margin: 0;
+  scroll-behavior: smooth;
+  outline: none;
+}
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,500,700');
+
+.App {
+  text-align: center;
+  height: 100%;
+  min-height: 100%;
+}
+
