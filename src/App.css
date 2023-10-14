@@ -5,6 +5,7 @@
   margin: 0;
   scroll-behavior: smooth;
   outline: none;
+  box-sizing: border-box
 }
 @import url('https://fonts.googleapis.com/css?family=Roboto:400,500,700');
 

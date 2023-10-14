@@ -260,6 +260,7 @@ const Dashboard = () => {
                                     <span className="p-0" style={{ fontSize: "8px", fontWeight: "700", color: "grey" }}>Customers that buy products</span>
                                 </div>
 
+                                    <div style={{ aspectRatio:"1/1", width:"70%", padding:"1px", background:"white", borderRadius:"50%", boxShadow:"0 0 5px 2px whitesmoke", position:"relative", margin:"20px auto"}}>
                                     <div className="progres" style={{background:`conic-gradient(rgba(209, 196, 229, 0.769) 365deg, white 0)`}} >
                                        <div className="second-progres" style={{background:`conic-gradient(rgb(107, 53, 193) 210deg, transparent 0)`}}>
                                            <div className="third-progres" style={{background:`conic-gradient(rgb(246, 183, 193) 65deg, transparent 0)`}}>
@@ -270,6 +271,7 @@ const Dashboard = () => {
                                                 </div>
                                            </div>
                                        </div>
+                                    </div>
                                     </div>
 
                                 {/* <VictoryPie

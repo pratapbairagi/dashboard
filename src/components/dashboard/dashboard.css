@@ -97,11 +97,11 @@ table tr td{
 
 .progres{
     position: relative;
-    width: 70%;
+    width: 76%;
     aspect-ratio: 1/1;
     border-radius: 50%;
     color: white; 
-    margin: 22% auto;
+    margin: 12% auto;
 }
 
 .progres::after{
