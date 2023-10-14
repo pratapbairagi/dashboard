@@ -164,7 +164,7 @@ const Dashboard = () => {
                                     </div>
                                 </div>
 
-                                <VictoryChart
+                                {/* <VictoryChart
                                     theme={VictoryTheme.material}
                                     domainPadding={2}
                                     width={600}
@@ -181,7 +181,6 @@ const Dashboard = () => {
                                         x="month"
                                         y="earning"
                                         cornerRadius={10}
-                                        // barWidth="36"
                                         style={{
                                             data: {
                                                 fill: ({ datum }) => datum._x === 10 ? "rgb(107, 53, 193)" : "rgba(209, 196, 229, 0.769)",
@@ -190,7 +189,69 @@ const Dashboard = () => {
                                         }}
                                     />
 
-                                </VictoryChart>
+                                </VictoryChart> */}
+
+                                <div className="row mt-2 m-auto" style={{width:"100%", height:"80%", minHeight:"180px"}}>
+                                    <div className="col col-1 p-0" style={{display:"flex", flexDirection:"column", justifyContent:"flex-end"}}>
+                                        <div style={{width:"70%", margin:"0 auto", height:"44%", background:"rgba(209, 196, 229, 0.769)", borderRadius:"12px"}}></div>
+                                        <div style={{color:"grey", fontSize:"12px", fontWeight:"500", paddingTop:"1vh"}}>Jan</div>
+                                    </div>
+                                    
+                                    <div className="col col-1 p-0" style={{display:"flex", flexDirection:"column", justifyContent:"flex-end"}}>
+                                    <div style={{width:"70%", margin:"0 auto", height:"54%", background:"rgba(209, 196, 229, 0.769)", borderRadius:"12px"}}></div>
+                                        <div style={{color:"grey", fontSize:"12px", fontWeight:"500", paddingTop:"1vh"}}>Feb</div>
+                                    </div>
+
+                                    <div className="col col-1 p-0" style={{display:"flex", flexDirection:"column", justifyContent:"flex-end"}}>
+                                    <div style={{width:"70%", margin:"0 auto", height:"33%", background:"rgba(209, 196, 229, 0.769)", borderRadius:"12px"}}></div>
+                                        <div style={{color:"grey", fontSize:"12px", fontWeight:"500", paddingTop:"1vh"}}>Mar</div>
+                                    </div>
+
+                                    <div className="col col-1 p-0" style={{display:"flex", flexDirection:"column", justifyContent:"flex-end"}}>
+                                    <div style={{width:"70%", margin:"0 auto", height:"48%", background:"rgba(209, 196, 229, 0.769)", borderRadius:"12px"}}></div>
+                                        <div style={{color:"grey", fontSize:"12px", fontWeight:"500", paddingTop:"1vh"}}>Apr</div>
+                                    </div>
+
+                                    <div className="col col-1 p-0" style={{display:"flex", flexDirection:"column", justifyContent:"flex-end"}}>
+                                    <div style={{width:"70%", margin:"0 auto", height:"55%", background:"rgba(209, 196, 229, 0.769)", borderRadius:"12px"}}></div>
+                                        <div style={{color:"grey", fontSize:"12px", fontWeight:"500", paddingTop:"1vh"}}>May</div>
+                                    </div>
+
+                                    <div className="col col-1 p-0" style={{display:"flex", flexDirection:"column", justifyContent:"flex-end"}}>
+                                    <div style={{width:"70%", margin:"0 auto", height:"47%", background:"rgba(209, 196, 229, 0.769)", borderRadius:"12px"}}></div>
+                                        <div style={{color:"grey", fontSize:"12px", fontWeight:"500", paddingTop:"1vh"}}>Jun</div>
+                                    </div>
+
+                                    <div className="col col-1 p-0" style={{display:"flex", flexDirection:"column", justifyContent:"flex-end"}}>
+                                    <div style={{width:"70%", margin:"0 auto", height:"51%", background:"rgba(209, 196, 229, 0.769)", borderRadius:"12px"}}></div>
+                                        <div style={{color:"grey", fontSize:"12px", fontWeight:"500", paddingTop:"1vh"}}>Jul</div>
+                                    </div>
+
+                                    <div className="col col-1 p-0" style={{display:"flex", flexDirection:"column", justifyContent:"flex-end"}}>
+                                    <div style={{width:"70%", margin:"0 auto", height:"73%", background:"rgb(107, 53, 193)", borderRadius:"12px"}}></div>
+                                        <div style={{color:"grey", fontSize:"12px", fontWeight:"500", paddingTop:"1vh"}}>Aug</div>
+                                    </div>
+
+                                    <div className="col col-1 p-0" style={{display:"flex", flexDirection:"column", justifyContent:"flex-end"}}>
+                                    <div style={{width:"70%", margin:"0 auto", height:"67%", background:"rgba(209, 196, 229, 0.769)", borderRadius:"12px"}}></div>
+                                        <div style={{color:"grey", fontSize:"12px", fontWeight:"500", paddingTop:"1vh"}}>Sep</div>
+                                    </div>
+
+                                    <div className="col col-1 p-0" style={{display:"flex", flexDirection:"column", justifyContent:"flex-end"}}>
+                                    <div style={{width:"70%", margin:"0 auto", height:"36%", background:"rgba(209, 196, 229, 0.769)", borderRadius:"12px"}}></div>
+                                        <div style={{color:"grey", fontSize:"12px", fontWeight:"500", paddingTop:"1vh"}}>Oct</div>
+                                    </div>
+
+                                    <div className="col col-1 p-0" style={{display:"flex", flexDirection:"column", justifyContent:"flex-end"}}>
+                                    <div style={{width:"70%", margin:"0 auto", height:"53%", background:"rgba(209, 196, 229, 0.769)", borderRadius:"12px"}}></div>
+                                        <div style={{color:"grey", fontSize:"12px", fontWeight:"500", paddingTop:"1vh"}}>Nov</div>
+                                    </div>
+
+                                    <div className="col col-1 p-0" style={{display:"flex", flexDirection:"column", justifyContent:"flex-end"}}>
+                                    <div style={{width:"70%", margin:"0 auto", height:"41%", background:"rgba(209, 196, 229, 0.769)", borderRadius:"12px"}}></div>
+                                        <div style={{color:"grey", fontSize:"12px", fontWeight:"500", paddingTop:"1vh"}}>Dec</div>
+                                    </div>
+                                </div>
                             </div>
 
                             <div className="col col-12 col-md-4 col-lg-4 m-0 py-3 pb-0" style={{ maxHeight: "70vh", background: "white", borderRadius: "6px" }}>
