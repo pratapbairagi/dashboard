@@ -49,7 +49,7 @@ const Dashboard = () => {
             <button onClick={(e) => {
                 document.querySelector(".col1").classList.add("activeDash");
 
-            }} className="dasboard-toggle-btn p-0" style={{ width: "46px", backgroundColor: "white", aspectRatio: "1/1", borderRadius: "50%", position: "fixed", zIndex: "1", top: "6.3vh", left: "12px", boxShadow: "0 0 1.5px grey" }}>
+            }} className="dasboard-toggle-btn p-0" style={{ width: "46px", backgroundColor: "white", aspectRatio: "1/1", borderRadius: "50%", position: "fixed", zIndex: "1", top: "9vh", left: "12px", boxShadow: "0 0 1.5px grey" }}>
                 <ColumnsGap color="grey" size="50%" />
             </button>
             {/* toggle dashboard button : end */}
@@ -124,14 +124,14 @@ const Dashboard = () => {
                     <div className="row p-0 m-0">
 
                         <div className="col col-12 px-2 py-2" style={{ display: "flex", flexDirection: "row", justifyContent: "space-between" }}>
-                            <span style={{ fontSize: "12px", color: "green", fontWeight: "500" }}>Hello, Pratap Bairagi</span>
-                            <fieldset className="px-2 py-1" style={{ display: "flex", flexDirection: "row", justifyContent: "center", alignItems: "center", background: "white", borderRadius: "4px" }}>
+                            <span className="mt-1" style={{ fontSize: "12px", color: "green", fontWeight: "500" }}>Hello, Pratap Bairagi</span>
+                            <fieldset className="px-2 py-2" style={{ display: "flex", flexDirection: "row", justifyContent: "center", alignItems: "center", background: "white", borderRadius: "4px" }}>
                                 <Search color="grey" />
                                 <input className="px-2" style={{ fontSize: "10px", color: "grey", marginLeft: "4px" }} type="text" placeholder="search..." />
                             </fieldset>
                         </div>
 
-                        <div className="col px-3 py-2" style={{ display: "flex", gap: "20px", maxWidth: "100%", minWidth: "100%", width: "100%", overflowX: "auto" }}>
+                        <div className="col px-3 py-2 mt-2" style={{ display: "flex", gap: "20px", maxWidth: "100%", minWidth: "100%", width: "100%", overflowX: "auto" }}>
 
                             {cardRecords.map((v, i) => {
                                 return <Cards key={i} Icon={v.inon} iconBg={v.iconBg} iconColor={v.iconColor} Arrow={v.arrows} colorArrow={v.colorArrow} amount={v.amount} result={v.result} title={v.title} />
@@ -181,11 +181,11 @@ const Dashboard = () => {
                                         x="month"
                                         y="earning"
                                         cornerRadius={10}
-                                        barWidth="36"
+                                        // barWidth="36"
                                         style={{
                                             data: {
                                                 fill: ({ datum }) => datum._x === 10 ? "rgb(107, 53, 193)" : "rgba(209, 196, 229, 0.769)",
-                                                width: "30"
+                                                width: "36"
                                             }
                                         }}
                                     />
@@ -193,7 +193,7 @@ const Dashboard = () => {
                                 </VictoryChart>
                             </div>
 
-                            <div className="col col-12 col-md-4 col-lg-4 m-0 py-3 pb-5" style={{ maxHeight: "70vh", background: "white", borderRadius: "6px" }}>
+                            <div className="col col-12 col-md-4 col-lg-4 m-0 py-3 pb-0" style={{ maxHeight: "70vh", background: "white", borderRadius: "6px" }}>
                                 <div style={{ display: "flex", flexDirection: "column", alignItems: "flex-start", width: "100%" }}>
                                     <span style={{ fontSize: "14px", fontWeight: "700", color: "black" }}>Customers</span>
                                     <span className="p-0" style={{ fontSize: "8px", fontWeight: "700", color: "grey" }}>Customers that buy products</span>

@@ -11,7 +11,7 @@ const Cards = ({title, Arrow, amount, result, Icon, colorArrow, iconBg, iconColo
                     <p className="p-0 m-0" style={{ fontSize: "16px", fontWeight: "700", color: "black" }}>$ {amount}K</p>
                     <p className="p-0 m-0" style={{ fontSize: "9px", fontWeight: "700", color: "grey", whiteSpace: "nowrap", lineHeight:"90%" }}>
                         <Arrow color={colorArrow} />
-                        <span className="mr-1" style={{ color: "green" }}>{result}% <span style={{color:"grey"}}>this month</span></span>
+                        <span className="mr-1" style={{ color: colorArrow }}>{result}% <span style={{color:"grey"}}>this month</span></span>
                         
                     </p>
                 </div>
